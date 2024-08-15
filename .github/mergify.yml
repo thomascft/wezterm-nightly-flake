@@ -1,6 +1,6 @@
 pull_request_rules:
   - name: "Automatic merge when flake.lock is updated"
     conditions:
-      - "author=github-actions[bot]"
+      - label = automerge
     actions:
       merge:
