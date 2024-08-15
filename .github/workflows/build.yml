@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  lockfile:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -20,6 +20,6 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build
         run: |
-          nix build --json \
+          nix build --accept-flake-config --json \
           | jq -r '.[].outputs | to_entries[].value' \
           | cachix push mycache
