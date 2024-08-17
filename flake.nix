@@ -10,6 +10,7 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     systems.url = "systems";
     wezterm.url = "github:wez/wezterm?dir=nix";
+    wezterm.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, systems, wezterm }: let
