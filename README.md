@@ -2,6 +2,9 @@
 
 A Nix Flake that automatically builds the latest WezTerm with Github Actions
 
+> [!IMPORTANT]  
+> Merged upstream https://github.com/wez/wezterm/pull/5979
+
 ## Usage
 
 WezTerm is exposed as this flake's default package. Just add it to your config somewhere like `environment.systemPackages` to use.
